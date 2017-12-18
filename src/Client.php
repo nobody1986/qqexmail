@@ -12,11 +12,13 @@ class Client{
     protected $_requester;
     protected $_accessToken;
     protected $_expire;
+    protected $_objs;
     function __construct($corpid,$secret)
     {
         $this->_corpid=$corpid;
         $this->_secret=$secret;
         $this->_requester = new Requester();
+        $this->_objs = [];
     }
 
     function auth(){
@@ -44,6 +46,13 @@ class Client{
             ]));
         }
         return $this->_requester->post($url,$data);
+    }
+    function __get($name){
+        $name= ucfirst(strtolower($name);
+        if(!isset($this->_objs[$name])){
+            $this->_objs[$name] = new $name($this);
+        }
+        return $this->_objs[$name];
     }
 
 
