@@ -1,0 +1,25 @@
+{
+    "name": "nobody1986/qqexmail",
+    "description": "a php sdk of QQ exmail.",
+    "keywords": ["exmail", "sdk", "api"],
+    "homepage": "http://oa.zhenai.com",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "license": "BSD",
+    "authors": [
+        {
+            "name": "nobody1986",
+            "email": "delmeok@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "autoload": {
+        "psr-4" : {
+            "Nobody1986\\Qqexmail" : "src/"
+        }
+    }
+}
