@@ -47,6 +47,7 @@ class Client{
         }
         return $this->_requester->post($url,$data);
     }
+    
     function __get($name){
         $name= ucfirst(strtolower($name);
         if(!isset($this->_objs[$name])){
@@ -54,7 +55,5 @@ class Client{
         }
         return $this->_objs[$name];
     }
-
-
 
 }

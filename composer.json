@@ -1,7 +1,7 @@
 {
     "name": "nobody1986/qqexmail",
     "description": "a php sdk of QQ exmail.",
-    "keywords": ["exmail", "sdk", "api"],
+    "keywords": ["exmail", "sdk", "api","企业邮箱","腾讯"],
     "homepage": "http://oa.zhenai.com",
     "require": {
         "guzzlehttp/guzzle": "^6.3"
