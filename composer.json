@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4" : {
-            "Nobody1986\\Qqexmail" : "src/"
+            "Nobody1986\\Qqexmail\\" : "src/"
         }
     }
 }
