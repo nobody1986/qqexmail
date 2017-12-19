@@ -22,9 +22,10 @@ class Requester
     }
     protected  function _request($method,$url,$data=[]){
         if($method=='GET'){
-            $resp = $this->_client->request($method,$url);
+            $resp = $this->_client->request($method,$url,['verify' => false]);
         }else{
             $resp = $this->_client->request($method,$url,[
+                'verify' => false,
                 'json' => $data
             ]);
         }
