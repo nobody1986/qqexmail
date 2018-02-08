@@ -31,15 +31,15 @@ class Requester
         }
         $status = $resp->getStatusCode();
         if($status!=self::HTTP_OK){
-            throw new errors\HttpException($status);
+            throw new errors\HttpException('',$status);
         }
         $body = (string)$resp->getBody();
         if(empty($body)){
-            throw new errors\HttpException(-1);
+            throw new errors\HttpException('',-1);
         }
         $bodyJson = json_decode($body,true);
         if($bodyJson['errcode'] != self::REQ_OK){
-            throw new errors\ExmailException($bodyJson['errcode'],$bodyJson['errmsg']);
+            throw new errors\ExmailException($bodyJson['errmsg'],$bodyJson['errcode']);
         }
         return $bodyJson;
     }

@@ -51,9 +51,11 @@ class Client{
     function __get($name){
         $name= ucfirst(strtolower($name));
         if(!isset($this->_objs[$name])){
-            $this->_objs[$name] = new __NAMESPACE__.'\\'.$name($this);
+            $class = __NAMESPACE__.'\\'.$name;
+            $this->_objs[$name] = new  $class($this);
         }
         return $this->_objs[$name];
     }
+
 
 }
